@@ -14,6 +14,7 @@ import Ai from "./components/services/AI/Ai";
 import Signup from "./components/sign/signup/Signup";
 
 import React from "react";
+import Projects from "./components/projects/Projects";
 
 const Notfound = () => {
   return <div>Sorry page not found</div>;
@@ -24,8 +25,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="*" element={<Notfound />} />
         <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign" element={<Sign />} />
@@ -35,6 +36,7 @@ function App() {
         <Route path="/services/backend" element={<Backend />} />
         <Route path="/services/crypto" element={<Crypto />} />
         <Route path="/services/ai" element={<Ai />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />
     </>
